@@ -54,22 +54,22 @@ xlrd>=2.0.0
 
 ```bash
 # Generate usernames (saves to ./usernames.list by default)
-python3 username_generator.py -t employees.xlsx
+python3 xl2usernames.py -t employees.xlsx
 
 # Specify output location
-python3 username_generator.py -t employees.xlsx -o /tmp/usernames.list
+python3 xl2usernames.py -t employees.xlsx -o /tmp/usernames.list
 
 # Specify output filename in current directory
-python3 username_generator.py -t employees.xlsx -o users.txt
+python3 xl2usernames.py -t employees.xlsx -o users.txt
 
 # Verbose output
-python3 username_generator.py -t employees.xlsx -v
+python3 xl2usernames.py -t employees.xlsx -v
 
 # Specify column name
-python3 username_generator.py -t employees.xlsx -c "Full Name"
+python3 xl2usernames.py -t employees.xlsx -c "Full Name"
 
 # Combine options
-python3 username_generator.py -t employees.xlsx -c "Employee Name" -o users.list -v
+python3 xl2usernames.py -t employees.xlsx -c "Employee Name" -o users.list -v
 ```
 
 ## Username Generation Patterns
@@ -107,7 +107,7 @@ For a name like **"Dilanka Kaushal Hewage"**, the tool generates:
 ## Example Output
 
 ```
-$ python3 username_generator.py -t employees.xlsx -v
+$ python3 xl2usernames.py -t employees.xlsx -v
 
 [+] Loading Excel file: employees.xlsx
 [+] Found 16 rows and 4 columns
@@ -131,7 +131,7 @@ $ python3 username_generator.py -t employees.xlsx -v
 ### Penetration Testing
 ```bash
 # Generate usernames for brute force attacks
-python3 username_generator.py -t company_employees.xlsx -o users.txt
+python3 xl2usernames.py -t company_employees.xlsx -o users.txt
 
 # Use with hydra
 hydra -L users.txt -P passwords.txt ssh://target.com
@@ -140,13 +140,13 @@ hydra -L users.txt -P passwords.txt ssh://target.com
 ### OSINT Investigations
 ```bash
 # Generate possible usernames for social media enumeration
-python3 username_generator.py -t persons_of_interest.xlsx -o targets.list
+python3 xl2usernames.py -t persons_of_interest.xlsx -o targets.list
 ```
 
 ### Security Audits
 ```bash
 # Check for weak username patterns in organization
-python3 username_generator.py -t hr_export.xlsx -o audit_users.list
+python3 xl2usernames.py -t hr_export.xlsx -o audit_users.list
 ```
 
 ## Command-Line Options
