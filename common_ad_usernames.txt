@@ -1,5 +1,7 @@
 administrator
+Administrator
 admin
+Admin
 guest
 krbtgt
 DefaultAccount
